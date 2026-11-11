@@ -1,0 +1,5 @@
+material_id,descripcion,diametro_pulg,largo_mm,estado,origen_suministro,fuente
+CAN1.2,PERNO 1/2 x 500 mm,1/2,500,ACTIVO,COMPRADO GALVANIZADO,catalogo_maestro_v7.xlsx (sha256 4afe61b79d6e05df…) MATERIALES fila 42
+CAN5.8,PERNO 5/8 x 500 mm,5/8,500,ACTIVO,COMPRADO GALVANIZADO,catalogo_maestro_v7.xlsx (sha256 4afe61b79d6e05df…) MATERIALES fila 43
+CAN3.4,PERNO 3/4 x 600 mm,3/4,600,ACTIVO,COMPRADO GALVANIZADO,catalogo_maestro_v7.xlsx (sha256 4afe61b79d6e05df…) MATERIALES fila 44
+CAN7.8,PERNO 7/8 x 700 mm,7/8,700,ACTIVO,COMPRADO GALVANIZADO,catalogo_maestro_v7.xlsx (sha256 4afe61b79d6e05df…) MATERIALES fila 45

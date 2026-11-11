@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORBE Cotizador</title>
+<style>
+:root{--bg:#F1F3F5;--surface:#fff;--ink:#141A1E;--muted:#5B666E;--line:#D5DCE0;--accent:#D3141C;--accent-ink:#fff;--sel:#141A1E;--sel-ink:#fff;
+--ok:#0F5C34;--ok-bg:#DDF1E5;--ok-bd:#2FA866;--warn:#6B4300;--warn-bg:#FCEFD6;--warn-bd:#E0A33A;--bad:#96101A;--bad-bg:#FBE3E4;--bad-bd:#E1252C;--info-bg:#E7EEF3;--hdr:#141A1E;--hdr-fg:#F1F3F5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1417;--surface:#171E22;--ink:#E8EDEF;--muted:#9AA6AE;--line:#2C373E;--accent:#F2393F;--sel:#E8EDEF;--sel-ink:#141A1E;--ok:#8BE0B0;--ok-bg:#13301F;--warn:#F3C878;--warn-bg:#33270F;--bad:#FF9A9E;--bad-bg:#3A1719;--info-bg:#1C2A33;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+header{background:var(--hdr);color:var(--hdr-fg)}
+header .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding-block:14px}
+.brand{font-weight:800;font-size:22px;letter-spacing:-.01em}.brand b{color:var(--accent)}
+.lock{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:5px 10px;opacity:.9}
+.lock.int{background:var(--accent);border-color:var(--accent);color:#fff;opacity:1}
+header button{margin-left:auto}
+main .wrap{padding-block:18px 56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:start}
+.col{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+h2{margin:0;font-size:18px;line-height:1.25;display:flex;gap:10px;align-items:center}
+h3{margin:0;font-size:15px}
+.num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--sel);color:var(--sel-ink);display:grid;place-items:center;font-size:15px;font-weight:800}
+.lbl{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px}
+.hint{font-size:13px;color:var(--muted);margin:0}
+select,input[type=number],input[type=text]{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:11px 12px;min-height:48px;min-width:0}
+select:focus-visible,input:focus-visible,button:focus-visible,.opt:focus-within{outline:3px solid var(--accent);outline-offset:2px}
+.opts{display:grid;gap:8px}.opts.c2{grid-template-columns:1fr 1fr}.opts.c3{grid-template-columns:repeat(3,1fr)}
+.opt{position:relative;display:flex;flex-direction:column;gap:2px;border:2px solid var(--line);border-radius:12px;padding:11px 12px;cursor:pointer;min-height:52px;justify-content:center;background:var(--surface)}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt b{font-size:15px;line-height:1.25}.opt span{font-size:12.5px;color:var(--muted);line-height:1.3}
+.opt:has(input:checked){border-color:var(--sel);background:var(--sel);color:var(--sel-ink)}.opt:has(input:checked) span{color:inherit;opacity:.8}
+.step{display:flex;gap:8px;align-items:stretch}.step input{text-align:center;font-weight:700;font-size:18px}
+.btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 16px;border-radius:12px;font-weight:700;font-size:15px;border:2px solid var(--line);background:var(--surface);color:var(--ink);text-align:center}
+.btn.pm{width:52px;flex:none;font-size:24px;padding:0}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.sm{min-height:38px;padding:6px 12px;font-size:13.5px;font-weight:600}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.err{color:var(--bad);font-size:13px;font-weight:600;margin:4px 0 0}.aviso{color:var(--warn);font-size:13px;font-weight:600;margin:4px 0 0}
+.malo{border-color:var(--bad-bd)!important}
+.chk{display:flex;gap:12px;align-items:flex-start;border:2px solid var(--line);border-radius:12px;padding:12px;cursor:pointer}
+.chk input{width:22px;height:22px;flex:none;margin:2px 0 0;accent-color:var(--accent)}
+.chk b{display:block;font-size:15px}.chk span{font-size:13px;color:var(--muted)}
+.res{position:sticky;top:12px}
+.veredicto{border-radius:14px;padding:16px;border:2px solid;display:flex;gap:14px;align-items:flex-start}
+.veredicto .ico{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:24px;font-weight:800;color:#fff}
+.veredicto b{display:block;font-size:20px;line-height:1.2}.veredicto p{margin:4px 0 0;font-size:14.5px}
+.veredicto.ok{background:var(--ok-bg);border-color:var(--ok-bd);color:var(--ok)}.veredicto.ok .ico{background:var(--ok-bd)}
+.veredicto.eng{background:var(--warn-bg);border-color:var(--warn-bd);color:var(--warn)}.veredicto.eng .ico{background:var(--warn-bd)}
+.veredicto.no{background:var(--bad-bg);border-color:var(--bad-bd);color:var(--bad)}.veredicto.no .ico{background:var(--bad-bd)}
+.precio{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.precio b{font-size:30px;font-variant-numeric:tabular-nums;line-height:1.1}
+table{width:100%;border-collapse:collapse;font-size:14.5px}td{padding:7px 4px;border-bottom:1px solid var(--line)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td{font-weight:800;border-top:2px solid var(--ink);border-bottom:0;font-size:16px}
+.note{font-size:13px;color:var(--muted);margin:0}
+details{border:1px solid var(--line);border-radius:12px;padding:10px 12px}summary{cursor:pointer;font-weight:600;font-size:14.5px}
+details[open] summary{margin-bottom:10px}
+.bar{height:12px;border-radius:99px;background:var(--bg);border:1px solid var(--line);position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:99px}.bar i.ok{background:var(--ok-bd)}.bar i.eng{background:var(--warn-bd)}.bar i.no{background:var(--bad-bd)}
+.alts{display:grid;gap:8px}
+.alt{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;gap:10px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14.5px}
+.alt:hover{border-color:var(--sel)}.alt b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.acciones{display:grid;gap:8px}
+.aviso-pie{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin:0}
+.accadd{display:flex;gap:8px}.accadd select{flex:1}
+.accfila{display:flex;gap:8px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:8px 10px;font-size:14.5px}
+.accfila>span{flex:1;min-width:0}.accfila small{display:block;color:var(--muted);font-size:12.5px}
+.accfila .btn{min-height:40px;width:40px;padding:0;font-size:20px;flex:none}.accfila output{min-width:22px;text-align:center;font-weight:800}
+[hidden]{display:none!important}
+.precio.ref>b{font-size:20px;color:var(--muted)}.precio.ref span b{font-size:inherit;color:var(--bad)}
+.step input{min-width:64px}
+#barra{display:none}
+@media (max-width:900px){main .wrap{grid-template-columns:1fr;padding-bottom:96px}.res{position:static}.opts.c3{grid-template-columns:1fr}
+  #barra{all:unset;box-sizing:border-box;cursor:pointer;display:flex;position:fixed;left:0;right:0;bottom:0;z-index:5;gap:12px;align-items:center;justify-content:space-between;padding:12px 16px;border-top:3px solid;font-weight:700;font-size:15px;box-shadow:0 -4px 16px rgba(0,0,0,.18)}
+  #barra.ok{background:var(--ok-bg);border-color:var(--ok-bd);color:var(--ok)}#barra.eng,#barra.err{background:var(--warn-bg);border-color:var(--warn-bd);color:var(--warn)}#barra.no{background:var(--bad-bg);border-color:var(--bad-bd);color:var(--bad)}
+  #barra b{font-size:19px;font-variant-numeric:tabular-nums;white-space:nowrap}#barra small{display:block;font-weight:500;font-size:12px}}
+@media (max-width:520px){.g2{grid-template-columns:1fr}}
+@media (max-width:420px){.opts.c2{grid-template-columns:1fr}.precio b{font-size:26px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">ORBE <b>Cotizador</b></div><span class="lock" id="modo"></span><button class="btn sm" id="bReset" type="button">Empezar de nuevo</button></div></header>
+<main><div class="wrap">
+<div class="col">
+  <section class="card">
+    <h2><span class="num">1</span>¿Qué poste?</h2>
+    <div class="g2">
+      <div><label class="lbl" for="fAlt">Altura</label><select id="fAlt"></select></div>
+      <div><label class="lbl" for="fQ">¿Cuántos postes?</label><div class="step"><button class="btn pm" type="button" data-pm="fQ,-1" aria-label="Uno menos">−</button><input id="fQ" type="number" inputmode="numeric" min="1" step="1"><button class="btn pm" type="button" data-pm="fQ,1" aria-label="Uno más">+</button></div><p class="err" id="eQ" hidden></p></div>
+    </div>
+    <div><span class="lbl">Tipo</span><div class="opts c3" id="fTipo" role="radiogroup" aria-label="Tipo de poste"></div></div>
+    <div><label class="lbl" for="fPoste">Modelo</label><select id="fPoste"></select><p class="hint" id="fDesc" style="margin-top:6px"></p></div>
+  </section>
+  <section class="card">
+    <h2><span class="num">2</span>¿Dónde se instala?</h2>
+    <div class="opts" id="fZona" role="radiogroup" aria-label="Lugar de instalación"></div>
+    <p class="hint">Define el viento con que se revisa el poste. Ante la duda, elige "No sé".</p>
+  </section>
+  <section class="card">
+    <h2><span class="num">3</span>¿Qué lleva arriba?</h2>
+    <div class="opts c2" id="fEq" role="radiogroup" aria-label="Equipo en la punta"></div>
+    <div id="boxFicha" class="g2">
+      <div><label class="lbl" for="fKg">Peso de cada equipo (kg)</label><input id="fKg" type="text" inputmode="decimal" autocomplete="off" placeholder="Ej.: 15"><p class="err" id="eKg" hidden></p></div>
+      <div><label class="lbl" for="fEpa">Área al viento, EPA (m²)</label><input id="fEpa" type="text" inputmode="decimal" autocomplete="off" placeholder="Ej.: 0,12"><p class="err" id="eEpa" hidden></p></div>
+    </div>
+    <p class="hint" id="hEq"></p>
+    <div><label class="lbl" for="fN">¿Cuántos equipos por poste?</label><div class="step" style="max-width:240px"><button class="btn pm" type="button" data-pm="fN,-1" aria-label="Uno menos">−</button><input id="fN" type="number" inputmode="numeric" min="1" step="1"><button class="btn pm" type="button" data-pm="fN,1" aria-label="Uno más">+</button></div><p class="err" id="eN" hidden></p></div>
+    <label class="chk"><input type="checkbox" id="fBrazo"><span><b>Lleva brazo, gancho o cruceta</b><span>Si el equipo no va justo sobre la punta del poste, márcalo.</span></span></label>
+    <div><label class="lbl" for="fAcc">Accesorios para cada poste (opcional)</label>
+      <div class="accadd"><select id="fAcc"></select><button class="btn" id="bAcc" type="button">Agregar</button></div>
+      <p class="hint" id="hAcc" style="margin-top:6px"></p>
+      <div id="accLista" class="alts" style="margin-top:8px"></div></div>
+  </section>
+  <section class="card">
+    <h2><span class="num">4</span>Precio</h2>
+    <div id="boxM"><span class="lbl">Margen (el mínimo es 30 %)</span><div class="opts c3" id="fM" role="radiogroup" aria-label="Margen"></div></div>
+    <label class="chk"><input type="checkbox" id="fFlete"><span><b>Con despacho en Santiago (<span id="fleteV"></span>)</b><span>Fuera de Santiago no despachamos: se le da al cliente el contacto del transporte.</span></span></label>
+  </section>
+</div>
+<div class="col res">
+  <section class="card" id="res" aria-live="polite"></section>
+  <section class="card" id="alt"></section>
+</div>
+</div></main>
+<button id="barra" type="button" aria-label="Ver el resultado"></button>
+<script>
+const D = /*DATOS*/;
+const INT = D.modo === 'interno', C = D.comercial;
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clp = n => n == null ? '—' : '$ ' + Math.round(n).toLocaleString('es-CL');
+const nf = (n, d = 1) => n == null ? '—' : Number(n).toLocaleString('es-CL', {minimumFractionDigits:d, maximumFractionDigits:d});
+const store = {get(k, v){ try{ const x = localStorage.getItem(k); return x ? JSON.parse(x) : v }catch(e){ return v } }, set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)) }catch(e){} }};
+
+/* ---------- opciones en palabras simples ---------- */
+const TIPOS = {tubular:['Tubular', 'Redondo, de cañería'], cuadrado:['Cuadrado', 'Perfil cuadrado'], facetado:['Facetado', '8 lados']};
+const ZONAS = {nose:['No sé la comuna', 'Se revisa con el peor caso', C.viento_por_omision], normal:['Ciudad o zona interior', 'Sitio normal, sin viento fuerte', 130], expuesto:['Costa, cerro o campo abierto', 'Lugar con mucho viento', 150]};
+/* equipos de referencia de ORBE Ventas (EPA y peso máximo por cabeza) */
+const EQUIPOS = {vial:['Luminaria de calle', 'Hasta 240 W', 15, 0.10], p400:['Proyector chico', 'Hasta 400 W', 25, 0.15], p1000:['Proyector grande', '401 a 1.000 W', 25, 0.25], ficha:['Otro: tengo la ficha', 'Escribo peso y área', null, null]};
+const DEF = {alt:9, tipo:'tubular', poste:null, zona:'nose', Q:1, N:1, eq:'vial', KG:15, EPA:0.10, brazo:false, M:C.margen_minimo, FL:false, acc:[]};
+/* accesorios del recetario: se suman al precio de cada poste; brazos, ganchos, crucetas y coronas mandan a revisión técnica */
+const ACC = Object.fromEntries((D.accesorios || []).map(a => [a.codigo, a]));
+const accPrecio = (a, M) => INT ? (a.costo == null ? null : a.costo / (1 - M)) : a.precio;
+const accSel = () => (S.acc || []).filter(x => ACC[x.c] && accPrecio(ACC[x.c], S.M) != null && x.n >= 1).map(x => ({a: ACC[x.c], n: x.n}));
+const fueraEje = () => accSel().some(x => x.a.fuera_eje);
+const accPeso = () => accSel().reduce((s, x) => s + (x.a.peso_kg || 0) * x.n, 0);
+let accPick = null;
+let S = Object.assign({}, DEF, store.get('cot3.sel', {}));
+if(!INT || !C.margenes.includes(S.M)) S.M = C.margen_minimo;
+if(!ZONAS[S.zona]) S.zona = 'nose'; if(!EQUIPOS[S.eq]) S.eq = 'vial';
+const V = () => ZONAS[S.zona][2];
+
+/* ---------- cálculo (igual que la versión anterior; probado contra el motor) ---------- */
+function q(H, v){ const p = D.presion; const qz = H <= 4 ? p.hasta_4m : p.a * Math.log(H) + p.b; return qz * (v / p.v_ref) ** 2 }
+function capacidad(poste, v, P){
+  if(!poste.capacidad) return {sin:true};
+  const fila = poste.capacidad[String(v)], i = D.pesos.findIndex(x => x >= P);
+  if(i < 0) return {fuera:true};
+  return {vmax: fila[i], pRef: D.pesos[i]};
+}
+function evaluar(poste, v, n, kg, epa, sop){
+  const P = Math.max(n * kg + sop, 0), F = n * epa * q(poste.altura_m, v), c = capacidad(poste, v, P);
+  if(c.sin) return {st:'eng', P, F, why: poste.nota_tecnica || 'Sin preverificación para este poste.'};
+  if(c.fuera) return {st:'eng', P, F, why:`El peso arriba (${nf(P)} kg) es mayor que lo que esta herramienta revisa (${D.pesos.at(-1)} kg).`};
+  if(c.vmax == null) return {st:'no', P, F, vmax:0, U:Infinity, why:`Con este viento el poste no resiste ni siquiera un equipo liviano.`};
+  const U = c.vmax > 0 ? F / c.vmax : Infinity;
+  let st = U <= 0.9 ? 'ok' : U <= 1 ? 'eng' : 'no';
+  let why = st === 'ok' ? `El poste trabaja al ${nf(U * 100, 0)} % de su capacidad.`
+    : st === 'eng' ? `El poste queda muy justo (${nf(U * 100, 0)} % de su capacidad).`
+    : `El viento sobre el equipo supera lo que el poste resiste (${nf(U * 100, 0)} % de su capacidad).`;
+  if(st === 'ok' && poste.nota_tecnica){ st = 'eng'; why = poste.nota_tecnica }
+  return {st, P, F, U, vmax:c.vmax, pRef:c.pRef, why};
+}
+function precioNeto(poste, M){ return INT ? poste.costo / (1 - M) : poste.precio }
+function totales(poste, M, Q, flete){
+  const acc = accSel().reduce((s, x) => s + accPrecio(x.a, M) * x.n, 0);
+  const neto = (precioNeto(poste, M) + acc) * Q, iva = neto * C.iva, fl = flete ? C.flete_santiago : 0;
+  return {unit: precioNeto(poste, M), acc, neto, iva, flete: fl, total: neto + iva + fl};
+}
+/* estado final: suma el peso de los accesorios y la regla del brazo (siempre revisión técnica) */
+const conBrazo = () => S.brazo || fueraEje();
+function estadoFinal(p){
+  const r = evaluar(p, V(), S.N, S.KG, S.EPA, accPeso());
+  if(conBrazo() && r.st === 'ok') return Object.assign({}, r, {st:'eng', why:'Lleva brazo, gancho o cruceta: esta herramienta no calcula ese esfuerzo. Lo revisa Ingeniería.'});
+  return r;
+}
+
+/* ---------- validación: mensajes claros, nunca un resultado con datos malos ---------- */
+function validar(){
+  const e = {}, w = {};
+  if(!Number.isInteger(S.Q) || S.Q < 1) e.Q = 'Escribe cuántos postes: 1 o más, sin decimales.'; else if(S.Q > 5000) e.Q = 'Son demasiados postes. Revisa el número.';
+  if(!Number.isInteger(S.N) || S.N < 1) e.N = 'Debe ir al menos 1 equipo, sin decimales.'; else if(S.N > 12) e.N = 'Más de 12 equipos en un poste: pide revisión técnica.';
+  if(S.eq === 'ficha'){
+    if(!(S.KG > 0)) e.Kg = 'Escribe el peso en kilos. Está en la ficha del equipo.'; else if(S.KG > 150) e.Kg = 'Más de 150 kg por equipo: revisa el dato o pide revisión técnica.';
+    if(!(S.EPA > 0)) e.Epa = 'Escribe el área en metros cuadrados (m²). Está en la ficha como EPA o "área proyectada".'; else if(S.EPA > 3) e.Epa = 'Más de 3 m² no es normal. ¿Lo escribiste en cm²? Debe ir en m².'; else if(S.EPA > 1) w.Epa = '¿Seguro? Lo habitual es entre 0,03 y 0,6 m².';
+  }
+  return {e, w};
+}
+
+/* ---------- interfaz ---------- */
+const alturas = [...new Set(D.postes.map(p => Math.round(p.altura_m)))].sort((a, b) => a - b);
+const deAltura = () => D.postes.filter(p => Math.round(p.altura_m) === S.alt);
+function radios(id, items, sel, name){
+  $(id).innerHTML = items.map(([v, t, s]) => `<label class="opt"><input type="radio" name="${name}" value="${esc(v)}" ${String(v) === String(sel) ? 'checked' : ''}><b>${esc(t)}</b>${s ? `<span>${esc(s)}</span>` : ''}</label>`).join('');
+}
+function render(){
+  if(!alturas.includes(S.alt)) S.alt = alturas.includes(9) ? 9 : alturas[0];
+  const enAlt = deAltura(), tipos = Object.keys(TIPOS).filter(t => enAlt.some(p => p.tipo === t));
+  if(!tipos.includes(S.tipo)) S.tipo = tipos[0];
+  const lista = enAlt.filter(p => p.tipo === S.tipo).sort((a, b) => precioNeto(a, S.M) - precioNeto(b, S.M));
+  if(!lista.some(p => p.codigo === S.poste)) S.poste = lista[0].codigo;
+  const p = D.postes.find(x => x.codigo === S.poste);
+  $('#modo').textContent = INT ? 'Interno · con costos' : 'Vendedores'; $('#modo').classList.toggle('int', INT);
+  $('#fAlt').innerHTML = alturas.map(a => `<option value="${a}" ${a === S.alt ? 'selected' : ''}>${a} metros</option>`).join('');
+  radios('#fTipo', tipos.map(t => [t, ...TIPOS[t]]), S.tipo, 'tipo');
+  $('#fPoste').innerHTML = lista.map(x => `<option value="${esc(x.codigo)}" ${x.codigo === S.poste ? 'selected' : ''}>${esc(x.codigo)} · ${clp(precioNeto(x, S.M))} + IVA</option>`).join('');
+  $('#fDesc').textContent = `${nf(p.altura_m, p.altura_m % 1 ? 1 : 0)} m · ${p.descripcion}`;
+  radios('#fZona', Object.entries(ZONAS).map(([k, z]) => [k, z[0], `${z[1]} · ${z[2]} km/h`]), S.zona, 'zona');
+  radios('#fEq', Object.entries(EQUIPOS).map(([k, x]) => [k, x[0], x[1]]), S.eq, 'eq');
+  const ficha = S.eq === 'ficha';
+  $('#boxFicha').hidden = !ficha;
+  $('#hEq').textContent = ficha ? 'Usa los datos de la ficha del fabricante. El peso en kilos y el área en m².' : `Se calcula con valores de referencia: ${nf(S.KG, 0)} kg y ${nf(S.EPA, 2)} m² por equipo. Si tienes la ficha del equipo, elige "Otro" y escribe sus datos.`;
+  const coma = v => Number.isFinite(v) ? String(v).replace('.', ',') : ''; if(document.activeElement !== $('#fKg')) $('#fKg').value = coma(S.KG); if(document.activeElement !== $('#fEpa')) $('#fEpa').value = coma(S.EPA);
+  if(document.activeElement !== $('#fQ')) $('#fQ').value = Number.isFinite(S.Q) ? S.Q : ''; if(document.activeElement !== $('#fN')) $('#fN').value = Number.isFinite(S.N) ? S.N : '';
+  // accesorios: lista para agregar (los sin precio se ven, pero no se pueden elegir) y los ya agregados
+  S.acc = (S.acc || []).filter(x => ACC[x.c] && accPrecio(ACC[x.c], S.M) != null);
+  const grupos = [...new Set((D.accesorios || []).map(a => a.grupo))];
+  $('#fAcc').innerHTML = '<option value="">Elige un accesorio…</option>' + grupos.map(g => `<optgroup label="${esc(g)}">${D.accesorios.filter(a => a.grupo === g).map(a => { const pr = accPrecio(a, S.M); return `<option value="${esc(a.codigo)}" ${pr == null ? 'disabled' : ''} ${a.codigo === accPick ? 'selected' : ''}>${esc(a.codigo)} · ${esc(a.nombre)}${a.detalle ? ' (' + esc(a.detalle) + ')' : ''} · ${pr == null ? 'sin precio: consultar' : clp(pr) + ' + IVA'}</option>` }).join('')}</optgroup>`).join('');
+  const sinPrecio = (D.accesorios || []).filter(a => accPrecio(a, S.M) == null).length;
+  $('#hAcc').textContent = `${(D.accesorios || []).length - sinPrecio} accesorios con precio. Otros ${sinPrecio} (ganchos, crucetas, coronas y algunos brazos) aparecen "sin precio": hay que consultarlos.`;
+  $('#accLista').innerHTML = accSel().map(x => `<div class="accfila"><span><b>${esc(x.a.codigo)}</b> · ${esc(x.a.nombre)}<small>${esc(x.a.detalle || x.a.grupo)} · ${clp(accPrecio(x.a, S.M))} + IVA c/u</small></span><button class="btn" type="button" data-acc="${esc(x.a.codigo)},-1" aria-label="Quitar uno">−</button><output>${x.n}</output><button class="btn" type="button" data-acc="${esc(x.a.codigo)},1" aria-label="Agregar uno">+</button></div>`).join('');
+  $$('[data-acc]').forEach(b => b.onclick = () => { const [c, d] = b.dataset.acc.split(','); const it = S.acc.find(x => x.c === c); it.n += +d; if(it.n < 1) S.acc = S.acc.filter(x => x !== it); if(it.n > 20) it.n = 20; render() });
+  $('#fBrazo').checked = conBrazo(); $('#fBrazo').disabled = fueraEje(); $('#fFlete').checked = S.FL; $('#fleteV').textContent = clp(C.flete_santiago);
+  if(INT) radios('#fM', C.margenes.map(m => [m, Math.round(m * 100) + ' %', m === C.margen_minimo ? 'Mínimo' : '']), S.M, 'margen'); else $('#boxM')?.remove();
+  const {e, w} = validar();
+  for(const k of ['Q', 'N', 'Kg', 'Epa']){ const el = $('#e' + k), inp = $('#f' + k); const msg = e[k] || w[k]; el.hidden = !msg; el.textContent = msg || ''; el.className = e[k] ? 'err' : 'aviso'; inp.classList.toggle('malo', !!e[k]); inp.setAttribute('aria-invalid', e[k] ? 'true' : 'false') }
+  store.set('cot3.sel', S);
+  if(Object.keys(e).length){
+    $('#res').innerHTML = `<div class="veredicto eng" id="estado" data-st="err"><div class="ico">!</div><div><b>Falta corregir un dato</b><p>Revisa lo que está marcado en rojo a la izquierda.</p></div></div>`;
+    $('#alt').hidden = true;
+    $('#barra').className = 'err'; $('#barra').innerHTML = '<span>Falta corregir un dato<small>Revisa lo marcado en rojo</small></span>';
+    return;
+  }
+  const r = estadoFinal(p), t = totales(p, S.M, S.Q, S.FL), U = r.U == null || !isFinite(r.U) ? null : r.U;
+  const TXT = {ok:['✓', 'Puedes cotizarlo', 'El poste resiste este equipo en este lugar.'], eng:['!', 'No cotices todavía', 'Pide primero la revisión técnica.'], no:['✕', 'Este poste no sirve aquí', 'Elige uno de los que aparecen abajo.']}[r.st];
+  const prelim = !ficha ? 'Resultado preliminar: se usaron valores de referencia del equipo, no su ficha.' : '';
+  const costoHTML = INT ? `<details id="dCosto"><summary>Costo: ${clp(p.costo)} · margen ${clp(t.unit - p.costo)} por poste</summary><table><tbody>
+      ${p.partidas.map(([l, v]) => `<tr><td>${esc(l)}</td><td class="n">${clp(v)}</td></tr>`).join('')}
+      <tr class="tot"><td>Costo del poste sin IVA</td><td class="n" id="costo">${clp(p.costo)}</td></tr>
+      ${accSel().map(x => `<tr><td>${esc(x.a.codigo)} × ${x.n} (costo ${clp(x.a.costo)} c/u)</td><td class="n">${clp(x.a.costo * x.n)}</td></tr>`).join('')}</tbody></table>
+      <p class="note" style="margin-top:8px">Origen: ${esc(p.costo_origen)}.${p.partidas.length && !p.costo_origen.startsWith('recalc') ? ` Las partidas suman ${clp(p.costo_recalculado)} (control).` : ''}${p.notas.length ? ' ' + esc(p.notas.join('. ')) + '.' : ''}</p></details>` : '';
+  $('#res').innerHTML = `<div class="veredicto ${r.st}" id="estado" data-st="${r.st}"><div class="ico" aria-hidden="true">${TXT[0]}</div><div><b>${TXT[1]}</b><p>${TXT[2]} ${esc(r.why)}</p></div></div>
+    <div><h3>${esc(p.codigo)} · ${TIPOS[p.tipo][0]} de ${S.alt} m</h3><p class="note">${esc(p.descripcion)}</p></div>
+    <div class="precio ${r.st === 'ok' ? '' : 'ref'}"><span>${r.st === 'ok' ? 'Total con IVA' + (S.FL ? ' y despacho' : '') : 'Precio de referencia · <b>no lo entregues al cliente todavía</b>'}</span><b id="total">${clp(t.total)}</b></div>
+    <table><tbody>
+      <tr><td>Precio de cada poste (sin IVA)</td><td class="n" id="unit">${clp(t.unit)}</td></tr>
+      ${t.acc ? `<tr><td>Accesorios de cada poste (${accSel().map(x => `${x.n} × ${esc(x.a.codigo)}`).join(', ')})</td><td class="n" id="accs">${clp(t.acc)}</td></tr>` : ''}
+      <tr><td>${S.Q} poste${S.Q > 1 ? 's' : ''}${t.acc ? ' con accesorios' : ''} (sin IVA)</td><td class="n" id="neto">${clp(t.neto)}</td></tr>
+      <tr><td>IVA ${Math.round(C.iva * 100)} %</td><td class="n" id="iva">${clp(t.iva)}</td></tr>
+      ${S.FL ? `<tr><td>Despacho en Santiago</td><td class="n" id="flete">${clp(t.flete)}</td></tr>` : ''}</tbody></table>
+    ${costoHTML}
+    <div class="acciones">${r.st === 'ok' ? `<button class="btn pri" type="button" id="bCopiar">Copiar cotización</button>` : `<button class="btn pri" type="button" id="bCopiar">Copiar solicitud de revisión técnica</button>`}</div>
+    <p class="note">${t.acc ? '<b>El precio incluye el poste y los accesorios listados.</b> No incluye luminarias ni instalación.' : '<b>El precio es solo del poste.</b> No incluye luminarias, accesorios ni instalación.'} ${esc(prelim)}</p>
+    <details><summary>Detalle técnico</summary>
+      ${U != null ? `<div class="bar"><i class="${r.st === 'ok' ? 'ok' : U > 1 ? 'no' : 'eng'}" style="width:${Math.min(100, U / 1.5 * 100).toFixed(1)}%"></i></div><p class="note" style="margin:6px 0 10px">Uso del poste: ${nf(U * 100, 0)} % (se aprueba solo hasta 90 %).</p>` : ''}
+      <table><tbody><tr><td>Viento de diseño</td><td class="n">${V()} km/h</td></tr><tr><td>Presión de viento en la punta</td><td class="n">${nf(q(p.altura_m, V()))} kg/m²</td></tr>
+      <tr><td>Fuerza del viento sobre el equipo</td><td class="n">${nf(r.F)} kg</td></tr><tr><td>Peso arriba</td><td class="n">${nf(r.P)} kg</td></tr>
+      <tr><td>Fuerza que resiste el poste</td><td class="n">${r.vmax == null ? '—' : nf(r.vmax) + ' kg'}</td></tr></tbody></table></details>
+    <p class="aviso-pie">Preverificación con la planilla de cálculo de ORBE (viento NCh 432 Of. 71). No reemplaza la memoria firmada por un ingeniero ni revisa placa, pernos o fundación. Uso interno de ORBE.</p>`;
+  $('#bCopiar').onclick = ev => copiar(textoCopia(p, r, t), ev.currentTarget);
+  $('#barra').className = r.st; $('#barra').innerHTML = `<span>${TXT[1]}<small>Toca para ver el detalle</small></span>${r.st === 'ok' ? `<b>${clp(t.total)}</b>` : ''}`;
+  // alternativas: misma altura, cualquier tipo, que sí se pueden cotizar; de menor a mayor precio
+  const alts = conBrazo() ? [] : enAlt.filter(x => x.codigo !== p.codigo).map(x => ({x, r: evaluar(x, V(), S.N, S.KG, S.EPA, accPeso()), pr: precioNeto(x, S.M)})).filter(a => a.r.st === 'ok').sort((a, b) => a.pr - b.pr).slice(0, 6);
+  $('#alt').hidden = false;
+  $('#alt').innerHTML = `<h3>${r.st === 'ok' ? 'Otros postes de ' + S.alt + ' m que también sirven' : 'Postes de ' + S.alt + ' m que sí puedes cotizar'}</h3>${alts.length ? `<div class="alts">${alts.map(a => `<button class="alt" type="button" data-alt="${esc(a.x.tipo)}|${esc(a.x.codigo)}"><span>${esc(a.x.codigo)} · ${TIPOS[a.x.tipo][0]}</span><b>${clp(a.pr)} + IVA</b></button>`).join('')}</div>` : `<p class="note">${conBrazo() ? 'Con brazo, gancho o cruceta siempre se pide revisión técnica.' : 'Ninguno de esta altura sirve con este equipo y lugar. Prueba con menos equipos o pide revisión técnica.'}</p>`}`;
+  $$('[data-alt]').forEach(b => b.onclick = () => { const [t2, c] = b.dataset.alt.split('|'); S.tipo = t2; S.poste = c; render(); window.scrollTo({top:0, behavior:'smooth'}) });
+}
+function textoCopia(p, r, t){
+  const eq = `${S.N} × ${EQUIPOS[S.eq][0].replace('Otro: tengo la ficha', 'equipo según ficha')} (${nf(S.KG, 1)} kg y ${nf(S.EPA, 2)} m² c/u)${conBrazo() ? ', con brazo, gancho o cruceta' : ''}`;
+  const accs = accSel().map(x => `Accesorio por poste: ${x.n} × ${x.a.codigo} ${x.a.nombre}${x.a.detalle ? ' (' + x.a.detalle + ')' : ''} · ${clp(accPrecio(x.a, S.M))} + IVA c/u`);
+  const base = [`Poste: ${p.codigo} · ${TIPOS[p.tipo][0]} de ${S.alt} m (${p.descripcion})`, `Cantidad: ${S.Q}`, `Lugar: ${ZONAS[S.zona][0]} (viento ${V()} km/h)`, `Equipo: ${eq}`, ...accs];
+  if(r.st === 'ok') return ['COTIZACIÓN ORBE · ' + new Date().toLocaleDateString('es-CL'), ...base, `Precio unitario del poste: ${clp(t.unit)} + IVA`, `Neto: ${clp(t.neto)}`, `IVA 19 %: ${clp(t.iva)}`, ...(S.FL ? [`Despacho en Santiago: ${clp(t.flete)}`] : []), `TOTAL: ${clp(t.total)}`, 'Solo postes: no incluye luminarias, brazos ni instalación.', 'Sujeto a revisión de Ingeniería ORBE antes de fabricar.'].join('\n');
+  return ['SOLICITUD DE REVISIÓN TÉCNICA · ' + new Date().toLocaleDateString('es-CL'), ...base, `Resultado del cotizador: ${r.st === 'no' ? 'no sirve' : 'requiere revisión'}. ${r.why}`, 'Cliente / proyecto / comuna: ', 'Ficha del equipo: '].join('\n');
+}
+function copiar(txt, b){
+  const listo = () => { const o = b.textContent; b.textContent = 'Copiado ✓ · pégalo donde quieras'; setTimeout(() => b.textContent = o, 2200) };
+  const plan = () => { const ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); listo() }catch(e){ alert(txt) } ta.remove() };
+  try{ navigator.clipboard.writeText(txt).then(listo, plan) }catch(e){ plan() }
+}
+/* ---------- eventos ---------- */
+const leer = (el, entero) => { const t = el.value.trim().replace(',', '.'); if(t === '') return NaN; const v = Number(t); return entero ? v : v };
+$('#fAlt').onchange = e => { S.alt = +e.target.value; S.poste = null; render() };
+$('#fPoste').onchange = e => { S.poste = e.target.value; render() };
+document.addEventListener('change', e => {
+  const t = e.target;
+  if(t.name === 'tipo'){ S.tipo = t.value; S.poste = null; render() }
+  else if(t.name === 'zona'){ S.zona = t.value; render() }
+  else if(t.name === 'margen'){ S.M = +t.value; render() }
+  else if(t.name === 'eq'){ S.eq = t.value; const x = EQUIPOS[S.eq]; if(x[2] != null){ S.KG = x[2]; S.EPA = x[3] } render(); if(S.eq === 'ficha') $('#fKg').focus() }
+});
+$('#fQ').oninput = e => { S.Q = leer(e.target, true); render() };
+$('#fN').oninput = e => { S.N = leer(e.target, true); render() };
+$('#fKg').oninput = e => { S.KG = leer(e.target); render() };
+$('#fEpa').oninput = e => { S.EPA = leer(e.target); render() };
+/* al salir de una casilla solo se ordena su texto; no se redibuja el resultado (si se redibujara, se perdería el clic en un botón) */
+$$('#fQ,#fN,#fKg,#fEpa').forEach(i => i.onblur = () => { const v = S[{fQ:'Q', fN:'N', fKg:'KG', fEpa:'EPA'}[i.id]]; if(Number.isFinite(v)) i.value = i.type === 'text' ? String(v).replace('.', ',') : v });
+$$('[data-pm]').forEach(b => b.onclick = () => { const [id, d] = b.dataset.pm.split(','); const k = id === 'fQ' ? 'Q' : 'N'; S[k] = Math.max(1, (Number.isFinite(S[k]) ? Math.round(S[k]) : 1) + (+d)); render() });
+$('#fBrazo').onchange = e => { S.brazo = e.target.checked; render() };
+$('#fFlete').onchange = e => { S.FL = e.target.checked; render() };
+$('#barra').onclick = () => $('#res').scrollIntoView({behavior:'smooth', block:'start'});
+$('#fAcc').onchange = e => { accPick = e.target.value || null };
+$('#bAcc').onclick = () => { const c = $('#fAcc').value; if(!c || !ACC[c] || accPrecio(ACC[c], S.M) == null){ $('#fAcc').focus(); return } const it = S.acc.find(x => x.c === c); if(it) it.n = Math.min(20, it.n + 1); else S.acc.push({c, n:1}); accPick = null; render() };
+$('#bReset').onclick = () => { S = Object.assign({}, DEF, {acc:[]}); render(); window.scrollTo({top:0}) };
+window.__cot = {evaluar, totales, precioNeto, q, D, V, estado: () => ({...S}), set(o){ Object.assign(S, o); if(o.poste){ const p = D.postes.find(x => x.codigo === o.poste); S.alt = Math.round(p.altura_m); S.tipo = p.tipo } render() }};
+render();
+</script>
+</body>
+</html>

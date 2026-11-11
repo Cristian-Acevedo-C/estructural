@@ -1,0 +1,5 @@
+material_id,descripcion,lado_a_mm,lado_b_mm,espesor_mm,kg,estado,fuente
+PL200,PLACA 200X200X10,200,200,10,3.14,ACTIVO,catalogo_maestro_v7.xlsx (sha256 4afe61b79d6e05df…) MATERIALES fila 37
+PL240,PLACA 240X240X10,240,240,10,4.91,ACTIVO,catalogo_maestro_v7.xlsx (sha256 4afe61b79d6e05df…) MATERIALES fila 38
+PL300,PLACA 300X300X12,300,300,12,8.48,ACTIVO,catalogo_maestro_v7.xlsx (sha256 4afe61b79d6e05df…) MATERIALES fila 39
+PL340,PLACA 340X340X12,340,340,12,10.74,ACTIVO,catalogo_maestro_v7.xlsx (sha256 4afe61b79d6e05df…) MATERIALES fila 40

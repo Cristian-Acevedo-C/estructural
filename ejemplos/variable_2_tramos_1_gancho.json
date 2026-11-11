@@ -1,0 +1,40 @@
+{
+  "_nota": "Configuración guardada en la plantilla A, hoja P.Var. 2 Tramos Circ. 1 gancho (caso de prueba, no es un proyecto real)",
+  "seccion": "circular",
+  "ganchos": 1,
+  "tramos": [
+    {
+      "altura_m": 6,
+      "diametro_cm": 11.53,
+      "espesor_cm": 0.534
+    },
+    {
+      "altura_m": 6,
+      "diametro_cm": 16.8,
+      "espesor_cm": 0.5
+    }
+  ],
+  "sobrecarga_kg": 50,
+  "viento_tablero_kg": 0,
+  "viento": {
+    "velocidad_kmh": 120
+  },
+  "gancho": {
+    "diametro_cm": 20,
+    "espesor_cm": 1,
+    "radio_cm": 130,
+    "t_cm": 3.5,
+    "distancia_cm": 100
+  },
+  "fy_kgcm2": 2400,
+  "coef_forma": 0.6,
+  "amortiguamiento": 0.02,
+  "coef_von_karman": 0.2,
+  "g_kgcm2": 840000,
+  "e_kgcm2": 2100000,
+  "fs_pandeo_general": 1.67,
+  "pernos": 6,
+  "celdas": {
+    "E44": "si"
+  }
+}

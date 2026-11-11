@@ -1,0 +1,27 @@
+{
+  "_nota": "Configuración guardada en la plantilla A, hoja P.Recto Circ. (caso de prueba, no es un proyecto real)",
+  "seccion": "circular",
+  "ganchos": 0,
+  "tramos": [
+    {
+      "altura_m": 6,
+      "diametro_cm": 8.9,
+      "espesor_cm": 0.3
+    }
+  ],
+  "sobrecarga_kg": 0.5,
+  "viento_tablero_kg": 20,
+  "viento": {
+    "velocidad_kmh": 120
+  },
+  "proyectores": {
+    "alto_cm": 10,
+    "ancho_cm": 26
+  },
+  "fy_kgcm2": 2400,
+  "coef_forma": 0.6,
+  "amortiguamiento": 0.02,
+  "coef_von_karman": 0.2,
+  "g_kgcm2": 840000,
+  "pernos": 4
+}

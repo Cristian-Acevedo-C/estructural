@@ -1,0 +1,7 @@
+# El motor (motor/excel.py, motor/validador.py) solo usa la biblioteca estándar de Python 3.
+# Estas dependencias son para extraer de las planillas y para las pruebas.
+openpyxl==3.1.5
+oletools
+pytest
+# Fase 3 (herramientas/fase3_*.py): automatizar Excel en Windows sobre copias. El motor no lo usa.
+pywin32==312; sys_platform == "win32"

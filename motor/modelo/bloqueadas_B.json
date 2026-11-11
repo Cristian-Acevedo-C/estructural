@@ -1,0 +1,625 @@
+{
+ "origen": {
+  "archivo": "plantilla_B_2026-10-21.xlsm",
+  "sha256": "d9fd0a556a1cb502a763c13a96f8c9c1fa386bd79b411189d2782e93d782c248"
+ },
+ "hojas": {
+  "P.Recto Circ.": {
+   "protegida": true,
+   "bloqueadas": {
+    "B143": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B51": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C85": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C86": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "S12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "U12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Recto Circ. 1 gancho": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B143": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B51": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C85": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C86": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "S12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "U12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Recto Circ. 2 ganchos": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B143": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B51": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C85": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C86": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "S12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "U12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Var.2 Tramos Circ.": {
+   "protegida": true,
+   "bloqueadas": {
+    "B142": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B50": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C85": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C86": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "E215": {
+     "entrada": "fs_pandeo_general",
+     "valor_planilla": 1.67
+    },
+    "K132": {
+     "entrada": "e_kgcm2",
+     "valor_planilla": 2100000
+    },
+    "S13": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T13": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Var. 2 Tramos Circ. 1 gancho": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B143": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B51": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C86": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C87": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "E216": {
+     "entrada": "fs_pandeo_general",
+     "valor_planilla": 1.67
+    },
+    "J128": {
+     "entrada": "e_kgcm2",
+     "valor_planilla": 2100000
+    },
+    "S13": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T13": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Var. 2 Tramos Circ. 2 ganchos": {
+   "protegida": false,
+   "bloqueadas": {}
+  },
+  "P.Var.3 Tramos Circ.": {
+   "protegida": true,
+   "bloqueadas": {
+    "B142": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B51": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C85": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C86": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "E215": {
+     "entrada": "fs_pandeo_general",
+     "valor_planilla": 1.67
+    },
+    "K132": {
+     "entrada": "e_kgcm2",
+     "valor_planilla": 2100000
+    },
+    "Y12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Var.3 Tramos Circ. 1 gancho": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B142": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B51": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C85": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C86": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "E215": {
+     "entrada": "fs_pandeo_general",
+     "valor_planilla": 1.67
+    },
+    "J127": {
+     "entrada": "e_kgcm2",
+     "valor_planilla": 2100000
+    },
+    "Y12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Var.3 Tramos Circ. 2 ganchos": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B141": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B50": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C84": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C85": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "E214": {
+     "entrada": "fs_pandeo_general",
+     "valor_planilla": 1.67
+    },
+    "J128": {
+     "entrada": "e_kgcm2",
+     "valor_planilla": 2100000
+    },
+    "Y12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Var.4 Tramos Circ.": {
+   "protegida": true,
+   "bloqueadas": {
+    "B143": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B52": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C86": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C87": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "E216": {
+     "entrada": "fs_pandeo_general",
+     "valor_planilla": 1.67
+    },
+    "K134": {
+     "entrada": "e_kgcm2",
+     "valor_planilla": 2100000
+    }
+   }
+  },
+  "P.Var.4 Tramos Circ. 1 gancho": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B130": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B51": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C76": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C77": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "E200": {
+     "entrada": "fs_pandeo_general",
+     "valor_planilla": 1.67
+    },
+    "J116": {
+     "entrada": "e_kgcm2",
+     "valor_planilla": 2100000
+    }
+   }
+  },
+  "P.Var.4 Tramos Circ. 2 ganchos": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B143": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B52": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.6
+    },
+    "C86": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C87": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "E216": {
+     "entrada": "fs_pandeo_general",
+     "valor_planilla": 1.67
+    },
+    "J127": {
+     "entrada": "e_kgcm2",
+     "valor_planilla": 2100000
+    }
+   }
+  },
+  "P.Recto Cuad.": {
+   "protegida": true,
+   "bloqueadas": {
+    "B142": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B53": {
+     "entrada": "coef_forma",
+     "valor_planilla": 1.6
+    },
+    "C85": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C86": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "S12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "U12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Recto Cuad. 1 gancho": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B142": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B53": {
+     "entrada": "coef_forma",
+     "valor_planilla": 1.6
+    },
+    "C85": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C86": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "F27": {
+     "entrada": "gancho.t_cm",
+     "valor_planilla": 30
+    },
+    "S12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "U12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Recto Cuad. 2 ganchos": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B142": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B53": {
+     "entrada": "coef_forma",
+     "valor_planilla": 1.6
+    },
+    "C85": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C86": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "F27": {
+     "entrada": "gancho.t_cm",
+     "valor_planilla": 30
+    },
+    "S12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "U12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Var. Octogonal": {
+   "protegida": true,
+   "bloqueadas": {
+    "B140": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B51": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.7
+    },
+    "C84": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C85": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "S12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "U12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Var. Octogonal 1 gancho": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "B140": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B58": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.7
+    },
+    "C84": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C85": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "S12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "U12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  },
+  "P.Var. Octogonal 2 ganchos": {
+   "protegida": true,
+   "bloqueadas": {
+    "A27": {
+     "entrada": "cable_lateral_kg",
+     "valor_planilla": 330
+    },
+    "B150": {
+     "entrada": "g_kgcm2",
+     "valor_planilla": 840000
+    },
+    "B68": {
+     "entrada": "coef_forma",
+     "valor_planilla": 0.7
+    },
+    "C94": {
+     "entrada": "amortiguamiento",
+     "valor_planilla": 0.02
+    },
+    "C95": {
+     "entrada": "coef_von_karman",
+     "valor_planilla": 0.2
+    },
+    "E27": {
+     "entrada": "viento_tablero_kg",
+     "valor_planilla": 0
+    },
+    "S12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "T12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    },
+    "U12": {
+     "entrada": "altura oculta",
+     "valor_planilla": 0
+    }
+   }
+  }
+ }
+}

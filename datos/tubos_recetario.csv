@@ -1,0 +1,20 @@
+material_id,norma,medida,diametro_ext_mm,espesor_mm,diametro_ext_cm,espesor_cm,kg_m,largo_barra_m,estado,fuente
+TUB-19_05x1_5,TUBO REDONDO,"3/4""",19.05,1.5,1.905,0.15,0.65,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 167
+TUB-19_05x2,TUBO REDONDO,"3/4""",19.05,2.0,1.905,0.2,0.84,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 171
+TUB-25_4x1_5,TUBO REDONDO,"1""",25.4,1.5,2.54,0.15,0.88,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 175
+TUB-31_75x1_5,TUBO REDONDO,"1"" 1/4",31.75,1.5,3.175,0.15,1.12,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 183
+TUB-31_75x2,TUBO REDONDO,"1"" 1/4",31.75,2.0,3.175,0.2,1.47,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 187
+TUB-50_8x1_5,TUBO REDONDO,"2""",50.8,1.5,5.08,0.15,1.82,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 199
+TUB-50_8x2,TUBO REDONDO,"2""",50.8,2.0,5.08,0.2,2.41,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 203
+TUB-50_8x3,TUBO REDONDO,"2""",50.8,3.0,5.08,0.3,3.54,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 207
+TUB-63_5x3,TUBO REDONDO,"2"" 1/2",63.5,3.0,6.35,0.3,4.48,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 215
+TUB-76_2x2,TUBO REDONDO,"3""",76.2,2.0,7.62,0.2,3.66,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 219
+TUB-76_2x3,TUBO REDONDO,"3""",76.2,3.0,7.62,0.3,5.42,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 223
+TUB-101_6x2,TUBO REDONDO,"4""",101.6,2.0,10.16,0.2,4.91,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 227
+TUB-101_6x3,TUBO REDONDO,"4""",101.6,3.0,10.16,0.3,7.29,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 231
+TUB-101_6x4,TUBO REDONDO,"4""",101.6,4.0,10.16,0.4,9.63,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 235
+TUB-101_6x5,TUBO REDONDO,"4""",101.6,5.0,10.16,0.5,11.9,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 239
+TUB-127x2,TUBO REDONDO,"5""",127.0,2.0,12.7,0.2,6.17,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 243
+TUB-127x3,TUBO REDONDO,"5""",127.0,3.0,12.7,0.3,9.17,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 247
+TUB-127x4,TUBO REDONDO,"5""",127.0,4.0,12.7,0.4,12.13,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 251
+TUB-127x5,TUBO REDONDO,"5""",127.0,5.0,12.7,0.5,15.04,6,RECETARIO (sin confirmar en catálogo maestro),recetario_2026-11-11.xlsx (sha256 9c8a60d8e3e56f75…) RECETARIO fila 255

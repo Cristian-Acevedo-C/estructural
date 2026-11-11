@@ -1,0 +1,72 @@
+codigo,plano_pdf,altura_armada_mm,n_cuerpos,cuerpo,posicion_desde_base,norma,D_mm,e_mm,visible_mm,corte_mm,embute_mm,peso_canerias_declarado_kg,total_corte_declarado_mm,fuente,estado
+3Ma,3Ma.pdf,3000,2,C1 BASE,1,ISO R65,88.9,3.2,2800,2800,0,20.0,3100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+3Ma,3Ma.pdf,3000,2,C2,2,ISO R65,60.3,2.9,200,300,100,20.0,3100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+3Mb,3Mb.pdf,3000,2,C1 BASE,1,ISO R65,114.3,3.6,2800,2800,0,28.5,3100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+3Mb,3Mb.pdf,3000,2,C2,2,ISO R65,60.3,2.9,200,300,100,28.5,3100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+3Mc,3Mc.pdf,3000,2,C1 BASE,1,ASTM A53,168.3,5.0,2800,2800,0,57.2,3100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+3Mc,3Mc.pdf,3000,2,C2,2,ISO R65,60.3,2.9,200,300,100,57.2,3100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+4Ma,4Ma.pdf,4000,2,C1 BASE,1,ISO R65,88.9,3.2,3800,3800,0,26.8,4100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+4Ma,4Ma.pdf,4000,2,C2,2,ISO R65,60.3,2.9,200,300,100,26.8,4100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+4Mb,4Mb.pdf,4000,2,C1 BASE,1,ISO R65,114.3,3.6,3800,3800,0,38.3,4100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+4Mb,4Mb.pdf,4000,2,C2,2,ISO R65,60.3,2.9,200,300,100,38.3,4100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+4Mc,4Mc.pdf,4000,2,C1 BASE,1,ASTM A53,168.3,5.0,3800,3800,0,77.2,4100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+4Mc,4Mc.pdf,4000,2,C2,2,ISO R65,60.3,2.9,200,300,100,77.2,4100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+5Ma,5Ma.pdf,5000,2,C1 BASE,1,ISO R65,88.9,3.2,4800,4800,0,33.5,5100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+5Ma,5Ma.pdf,5000,2,C2,2,ISO R65,60.3,2.9,200,300,100,33.5,5100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+5Mb,5Mb.pdf,5000,2,C1 BASE,1,ISO R65,114.3,3.6,4800,4800,0,48.0,5100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+5Mb,5Mb.pdf,5000,2,C2,2,ISO R65,60.3,2.9,200,300,100,48.0,5100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+5Mc,5Mc.pdf,5000,2,C1 BASE,1,ASTM A53,168.3,5.0,4800,4800,0,97.2,5100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+5Mc,5Mc.pdf,5000,2,C2,2,ISO R65,60.3,2.9,200,300,100,97.2,5100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+6Ma,6Ma.pdf,6000,2,C1 BASE,1,ISO R65,88.9,3.2,5800,5800,0,40.2,6100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+6Ma,6Ma.pdf,6000,2,C2,2,ISO R65,60.3,2.9,200,300,100,40.2,6100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+6Mb,6Mb.pdf,6000,2,C1 BASE,1,ISO R65,114.3,3.6,5800,5800,0,57.8,6100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+6Mb,6Mb.pdf,6000,2,C2,2,ISO R65,60.3,2.9,200,300,100,57.8,6100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+6Mc,6Mc.pdf,6000,2,C1 BASE,1,ASTM A53,168.3,5.0,5800,5800,0,117.2,6100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+6Mc,6Mc.pdf,6000,2,C2,2,ISO R65,60.3,2.9,200,300,100,117.2,6100,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+7Ma,7Ma.pdf,7000,4,C1 BASE,1,ISO R65,114.3,3.6,3000,3000,0,56.6,7600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+7Ma,7Ma.pdf,7000,4,C2,2,ISO R65,88.9,3.2,1800,2000,200,56.6,7600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+7Ma,7Ma.pdf,7000,4,C3,3,ISO R65,76.1,3.2,1800,2000,200,56.6,7600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+7Ma,7Ma.pdf,7000,4,C4,4,ISO R65,60.3,2.9,400,600,200,56.6,7600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+7Mb,7Mb.pdf,7000,2,C1 BASE,1,ISO R65,88.9,3.2,6000,6000,0,45.2,7200,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+7Mb,7Mb.pdf,7000,2,C2,2,ISO R65,60.3,2.9,1000,1200,200,45.2,7200,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+8Ma,8Ma.pdf,8000,4,C1 BASE,1,ISO R65,114.3,3.6,3000,3000,0,60.6,8600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+8Ma,8Ma.pdf,8000,4,C2,2,ISO R65,88.9,3.2,1800,2000,200,60.6,8600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+8Ma,8Ma.pdf,8000,4,C3,3,ISO R65,76.1,3.2,1800,2000,200,60.6,8600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+8Ma,8Ma.pdf,8000,4,C4,4,ISO R65,60.3,2.9,1400,1600,200,60.6,8600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+8Mb,8Mb.pdf,8000,2,C1 BASE,1,ISO R65,114.3,3.6,6000,6000,0,67.5,8200,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+8Mb,8Mb.pdf,8000,2,C2,2,ISO R65,60.3,2.9,2000,2200,200,67.5,8200,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+9Ma,9Ma.pdf,9000,4,C1 BASE,1,ISO R65,114.3,3.6,3000,3000,0,69.0,9600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+9Ma,9Ma.pdf,9000,4,C2,2,ISO R65,88.9,3.2,2800,3000,200,69.0,9600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+9Ma,9Ma.pdf,9000,4,C3,3,ISO R65,76.1,3.2,2800,3000,200,69.0,9600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+9Ma,9Ma.pdf,9000,4,C4,4,ISO R65,60.3,2.9,400,600,200,69.0,9600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+9Mb,9Mb.pdf,9000,4,C1 BASE,1,ISO R65,114.3,3.6,6000,6000,0,80.1,9600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+9Mb,9Mb.pdf,9000,4,C2,2,ISO R65,88.9,3.2,1500,1700,200,80.1,9600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+9Mb,9Mb.pdf,9000,4,C3,3,ISO R65,76.1,3.2,1300,1500,200,80.1,9600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+9Mb,9Mb.pdf,9000,4,C4,4,ISO R65,60.3,2.9,200,400,200,80.1,9600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+10Ma,10Ma.pdf,10000,4,C1 BASE,1,ISO R65,114.3,3.6,3000,3000,0,73.1,10600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+10Ma,10Ma.pdf,10000,4,C2,2,ISO R65,88.9,3.2,2800,3000,200,73.1,10600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+10Ma,10Ma.pdf,10000,4,C3,3,ISO R65,76.1,3.2,2800,3000,200,73.1,10600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+10Ma,10Ma.pdf,10000,4,C4,4,ISO R65,60.3,2.9,1400,1600,200,73.1,10600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+10Mb,10Mb.pdf,10000,4,C1 BASE,1,ISO R65,114.3,3.6,6000,6000,0,85.8,10600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+10Mb,10Mb.pdf,10000,4,C2,2,ISO R65,88.9,3.2,1800,2000,200,85.8,10600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+10Mb,10Mb.pdf,10000,4,C3,3,ISO R65,76.1,3.2,1800,2000,200,85.8,10600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+10Mb,10Mb.pdf,10000,4,C4,4,ISO R65,60.3,2.9,400,600,200,85.8,10600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+11Ma,11Ma.pdf,11000,5,C1 BASE,1,ASTM A53,168.3,5.0,3000,3000,0,121.5,11800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+11Ma,11Ma.pdf,11000,5,C2,2,ISO R65,114.3,3.6,2800,3000,200,121.5,11800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+11Ma,11Ma.pdf,11000,5,C3,3,ISO R65,88.9,3.2,1800,2000,200,121.5,11800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+11Ma,11Ma.pdf,11000,5,C4,4,ISO R65,76.1,3.2,1800,2000,200,121.5,11800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+11Ma,11Ma.pdf,11000,5,C5,5,ISO R65,60.3,2.9,1600,1800,200,121.5,11800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+11Mb,11Mb.pdf,11000,4,C1 BASE,1,ASTM A53,168.3,5.0,6000,6000,0,165.1,11600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+11Mb,11Mb.pdf,11000,4,C2,2,ISO R65,114.3,3.6,2800,3000,200,165.1,11600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+11Mb,11Mb.pdf,11000,4,C3,3,ISO R65,88.9,3.2,1800,2000,200,165.1,11600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+11Mb,11Mb.pdf,11000,4,C4,4,ISO R65,60.3,2.9,400,600,200,165.1,11600,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Ma,12Ma.pdf,12000,5,C1 BASE,1,ASTM A53,168.3,5.0,3000,3000,0,129.8,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Ma,12Ma.pdf,12000,5,C2,2,ISO R65,114.3,3.6,2800,3000,200,129.8,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Ma,12Ma.pdf,12000,5,C3,3,ISO R65,88.9,3.2,2800,3000,200,129.8,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Ma,12Ma.pdf,12000,5,C4,4,ISO R65,76.1,3.2,2800,3000,200,129.8,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Ma,12Ma.pdf,12000,5,C5,5,ISO R65,60.3,2.9,600,800,200,129.8,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Mb,12Mb.pdf,12000,5,C1 BASE,1,ASTM A53,168.3,5.0,6000,6000,0,167.6,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Mb,12Mb.pdf,12000,5,C2,2,ISO R65,114.3,3.6,1800,2000,200,167.6,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Mb,12Mb.pdf,12000,5,C3,3,ISO R65,88.9,3.2,1800,2000,200,167.6,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Mb,12Mb.pdf,12000,5,C4,4,ISO R65,76.1,3.2,1800,2000,200,167.6,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF
+12Mb,12Mb.pdf,12000,5,C5,5,ISO R65,60.3,2.9,600,800,200,167.6,12800,"transcripción manual de tabla ""Especificaciones de fabricación"", plano REV. M",POR_VERIFICAR_CONTRA_PDF

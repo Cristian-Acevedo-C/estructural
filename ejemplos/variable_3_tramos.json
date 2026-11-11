@@ -1,0 +1,39 @@
+{
+  "_nota": "Configuración guardada en la plantilla A, hoja P.Var.3 Tramos Circ. (caso de prueba, no es un proyecto real)",
+  "seccion": "circular",
+  "ganchos": 0,
+  "tramos": [
+    {
+      "altura_m": 0.6,
+      "diametro_cm": 11.4,
+      "espesor_cm": 0.305
+    },
+    {
+      "altura_m": 5.4,
+      "diametro_cm": 16.83,
+      "espesor_cm": 0.34
+    },
+    {
+      "altura_m": 6,
+      "diametro_cm": 21.9,
+      "espesor_cm": 0.478
+    }
+  ],
+  "sobrecarga_kg": 110,
+  "viento_tablero_kg": 133,
+  "viento": {
+    "velocidad_kmh": 120
+  },
+  "proyectores": {
+    "alto_cm": 228,
+    "ancho_cm": 472
+  },
+  "fy_kgcm2": 2400,
+  "coef_forma": 0.6,
+  "amortiguamiento": 0.02,
+  "coef_von_karman": 0.2,
+  "g_kgcm2": 840000,
+  "e_kgcm2": 2100000,
+  "fs_pandeo_general": 1.67,
+  "pernos": 6
+}
